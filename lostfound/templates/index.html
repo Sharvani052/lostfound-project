@@ -1,0 +1,40 @@
+<h1>Campus Lost & Found</h1>
+
+<a href="/report">Report Item</a> |
+<a href="/login">Admin Login</a>
+
+<h2>Search Item</h2>
+
+<form method="GET">
+
+<input type="text" name="search" placeholder="Search item">
+
+<button type="submit">Search</button>
+
+</form>
+
+<h2>Items List</h2>
+
+<table border="1">
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Description</th>
+<th>Location</th>
+<th>Type</th>
+</tr>
+
+{% for item in items %}
+
+<tr>
+<td>{{item[0]}}</td>
+<td>{{item[1]}}</td>
+<td>{{item[2]}}</td>
+<td>{{item[3]}}</td>
+<td>{{item[4]}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
